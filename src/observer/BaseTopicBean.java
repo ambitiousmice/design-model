@@ -15,8 +15,9 @@ public abstract class BaseTopicBean {
     private String publishContext;
 
     public List<Observer> getObserverList() {
-        synchronized (this){
-            if(observerList==null){
+
+        if(observerList==null){
+                synchronized (this){
                 this.observerList = new ArrayList<Observer>();
             }
         }
