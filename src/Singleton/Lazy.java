@@ -25,7 +25,7 @@ public class Lazy {
         if (lazy == null){
             synchronized (Lazy.class){
                 if (lazy == null){
-                    return new Lazy();
+                    return lazy = new Lazy();
                 }
             }
         }
@@ -35,8 +35,10 @@ public class Lazy {
 //===================================================================================
 
     //静态内部类（推荐使用 线程安全）
+    //其主要原理为：Java中静态内部类可以访问其外部类的成员属性和方法，同时，静态内部类只有当被调用的时候才开始首次被加载，
+    //利用此特性，可以实现懒汉式，在静态内部类中静态初始化外部类的单一实例即可
     private static class LazyHold{
-        private static final Lazy INSTANCE = new Lazy();
+        private static Lazy INSTANCE = new Lazy();
     }
     public static Lazy getInstance3(){
         return LazyHold.INSTANCE;

@@ -7,18 +7,18 @@ public class Customer {
     public static void main(String[] args) {
         System.out.println("订购一台2S:");
         Xiaomi2SFactory xiaomi2SFactory = new Xiaomi2SFactory();
-        xiaomi2SFactory.getXiaomi2S();
+        xiaomi2SFactory.getXiaomi();
 
         System.out.println("订购一台4:");
         Xiaomi4Factory xiaomi4Factory = new Xiaomi4Factory();
-        xiaomi4Factory.getXiaomi4();
+        xiaomi4Factory.getXiaomi();
 
         System.out.println("订购一台5:");
         Xiaomi5Factory xiaomi5Factory = new Xiaomi5Factory();
-        xiaomi5Factory.getXiaomi5();
+        xiaomi5Factory.getXiaomi();
 
         System.out.println("订购一台6:");
         Xiaomi6Factory xiaomi6Factory = new Xiaomi6Factory();
-        xiaomi6Factory.getXiaomi6();
+        xiaomi6Factory.getXiaomi();
     }
 }
